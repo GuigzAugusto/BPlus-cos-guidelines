@@ -105,3 +105,19 @@ The use of XECUTE command has security and performance implications:
 * Performance: the string input needs to be constructed (if not a single string literal but a concatenation of strings, for instnace) and evaluated.
 
 For these reasons, you should avoid using XECUTE and use a proper set of commands instead.
+
+## Discontinued functions
+
+The use of discontinued functions and methods:
+ 
+ * Security: many of then have problems with permissions
+
+### Example
+
+```cos
+  // Bad
+  D ZF(-1,command)
+  
+  //Good
+  D ZF(-100, command)
+For these reasons, you should avoid using XECUTE and use a proper set of commands instead.
